@@ -1,51 +1,8 @@
-* {
-  margin: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-}
-
-@font-face {
-  font-family: "Trench";
-  src: url("trench100.ttf");
-}
-
-@font-face {
-  font-family: "Hey Comic";
-  src: url("HeyComic.ttf");
-}
-
-:root {
-  --realce: #00a1ff;
-}
-
-body {
-  background: #000 url("../img/bg.jpg") no-repeat fixed 50%;
-  background-size: cover;
-  height: 100vh;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
-
-#content {
-  max-width: 1300px;
-  margin: 0 auto;
-  position: relative;
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#wrapper {
   background-color: #000c;
-  border-radius: 20px;
 }
 
-#content header {
+#back {
   width: 100%;
   color: white;
   text-align: center;
@@ -56,38 +13,38 @@ body {
   font-family: Trench;
 }
 
-header h1 {
+#back h1 {
   font-size: 120px;
   margin: 50px 0;
   color: var(--realce);
   text-shadow: 0px 0px 20px blue;
 }
 
-header h2 {
+#back h2 {
   font-size: 50px;
   margin: 20px;
   font-weight: normal;
 }
 
-header h3 {
+#back h3 {
   font-size: 25px;
   font-weight: normal;
 }
 
-main {
+#home {
   position: relative;
-  z-index: 1;
+  z-index: 5;
   margin: 500px auto 100px;
   border: 10px solid var(--realce);
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 0 25px 5px var(--realce);
   width: 96%;
-  background-color: #000c;
+  background-color: #000;
   color: white;
 }
 
-main #logo {
+#home #logo {
   margin-top: -90px;
   padding: 10px;
   width: 180px;
@@ -99,7 +56,7 @@ main #logo {
   box-shadow: 0 0 25px 5px var(--realce);
 }
 
-main section h1 {
+#home section h1 {
   font-family: "Trench";
   font-size: 50px;
   color: var(--realce);
@@ -127,10 +84,11 @@ main section h1 {
   color: orange
 }
 
-.conteudo-principal {
+#conteudo-secundario {
+  position: relative;
   background-color: #000c;
   border-radius: 20px;
-  z-index: 1;
+  z-index: 5;
   width: 100%;
 }
 
@@ -177,7 +135,7 @@ main section h1 {
   cursor: pointer;
 }
 
-main section {
+#home section {
   position: relative;
 }
 
@@ -415,104 +373,4 @@ main section {
   position: absolute;
   width: 100%;
   height: 100%;
-}
-
-footer {
-  color: white;
-  position: relative;
-  z-index: 5;
-  padding: 50px 0 30px;
-  text-align: center;
-  background-color: #001d;
-  border-top: 2px solid black;
-  margin-top: 30px;
-}
-
-footer img {
-  margin-bottom: 15px;
-  width: 70px;
-}
-
-footer p {
-  margin: 20px;
-}
-
-footer a {
-  color: var(--realce)
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-@media screen and (max-width: 1200px) {
-  .container {
-    flex-wrap: wrap;
-  }
-
-  .card {
-    width: 100%;
-  }
-
-  header h1 {
-    font-size: 90px;
-    margin: 40px 0;
-  }
-
-  header h2 {
-    font-size: 35px;
-    margin: 15px;
-    font-weight: normal;
-  }
-
-  header h3 {
-    font-size: 20px;
-    font-weight: normal;
-  }
-}
-
-
-@media screen and (max-width: 900px) {
-  .container {
-    flex-wrap: wrap;
-    flex-basis: 1;
-  }
-
-  header h1 {
-    font-size: 70px;
-    margin: 35px 0;
-  }
-
-  header h2 {
-    font-size: 30px;
-    margin: 15px;
-    font-weight: normal;
-  }
-
-  header h3 {
-    font-size: 15px;
-    font-weight: normal;
-  }
-}
-
-@media screen and (max-width: 710px) {
-  .container {
-
-  }
-
-  header h1 {
-    font-size: 35px;
-    margin: 30px 0;
-  }
-
-  header h2 {
-    font-size: 20px;
-    margin: 10px;
-    font-weight: normal;
-  }
-
-  header h3 {
-    font-size: 10px;
-    font-weight: normal;
-  }
 }
