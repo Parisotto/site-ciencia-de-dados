@@ -49,16 +49,17 @@ body {
 }
 
 #geral {
+  width: 1300px;
   min-height: 300px;
-  width: 100%;
   position: relative;
-  z-index: 5;
-  margin: 80px auto 0;
+  margin: 100px auto 0;
+  padding: 20px;
   border-radius: 10px;
-  text-align: center;
   box-shadow: 0 0 10px 3px #00a1ff99;
+  text-align: center;
   background-color: #000c;
   color: white;
+  border: 1px solid white;
 }
 
 footer {
