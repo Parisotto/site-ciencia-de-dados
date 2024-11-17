@@ -1,4 +1,4 @@
 # Projeto Ciência de Dados
-- Página estática: https://variavel.com.br/cdtec
+- <a href="https://variavel.com.br/cdtec" target="_blank">Frontpage do Projeto</a>
 
 ![Frontpage do Projeto](siteciencia/static/img/site.png)
