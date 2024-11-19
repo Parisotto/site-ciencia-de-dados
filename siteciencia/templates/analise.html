@@ -1,8 +1,11 @@
 {% extends "base.html" %}
-{%block title%}Análise de Dados{%endblock%}
+
+{% block title %}Análise de Dados{% endblock %}
+
 {% block head %}{{ super() }}
   <link rel="stylesheet" href="../static/css/analise.css">
 {% endblock %}
+
 {% block content %}      
 <div id="geral">
   <h1>Olá, {{ usuario }}</h1>

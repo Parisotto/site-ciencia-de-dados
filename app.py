@@ -9,9 +9,11 @@ def index():
   # return "<h1>Bom dia, professor Parisotto</h1>"
   return render_template("index.html")
 
+@app.route("/analise", defaults={'usuario':'Visitante'})
 @app.route("/analise/<usuario>")
 def analise(usuario):
   return render_template('analise.html', usuario=usuario)
+  
 
 if __name__ == "__main__":
   app.run(debug=True)
