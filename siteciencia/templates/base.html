@@ -10,8 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
-  <title>Base</title>
-  
+  <title>{% block title %}{% endblock %}</title>
+  {% block head %}{% endblock %}
 </head>
 <body>
   <div id="wrapper">
@@ -23,11 +23,13 @@
           <li><a href="#">Escola</a></li>
           <li><a href="#">Professores</a></li>
           <li><a href="#">Alunos</a></li>
+          <li><a href="">Contato</a></li>
+          <li><a href="/galeria">Galeria</a></li>
         </ul>
       </nav>
     </header>
     <div id="conteudo-principal">
-
+      {% block content %}{% endblock %}
     </div>
   </div>
 
@@ -43,7 +45,7 @@
     window.onscroll = function () { 
       var header = document.getElementById("menu-principal"); 
       if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-         header.classList.add("header-small"); 
+          header.classList.add("header-small"); 
         } else { 
           header.classList.remove("header-small"); 
         } 

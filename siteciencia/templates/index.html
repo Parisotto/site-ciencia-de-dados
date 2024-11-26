@@ -1,39 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../static/css/base.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-
-  <title>Curso Técnico Ciência de Dados</title>
-  <link rel="stylesheet" href="../static/css/index.css">
-</head>
-<body>
-  <div id="wrapper">
-    <header id="menu-principal">
-      <nav>
-        <div class="logo"> <a href="/"><img src="../static/img/logo-python.png" alt="Logo do Site"></a> </div>
-        <ul>
-          <li><a href="#">Curso</a></li>
-          <li><a href="#">Escola</a></li>
-          <li><a href="#">Professores</a></li>
-          <li><a href="#">Alunos</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div id="conteudo-principal">
-
-
-      
-<!--//////////////        EXCLUIR DAQUI PARA CIMA         ////////////////-->
+{% extends "base.html" %}
+{% block title %}Curso Técnico Ciência de Dados{% endblock %}
+{% block head %}<link rel="stylesheet" href="../static/css/index.css">{% endblock %}
+{% block content %}
       <div id="back">
         <h1>Ciência de Dados</h1>
-        <h2>Escola Estadual Dr. Ângelo Mendes de Almeida SP</h2>
+        <h2>Escola Estadual Dr. Ângelo Mendes de Almeida SP<index/h2>
         <h2>Turma 2°b 2024</h2>
         <h3>Prof. Parisotto</h3>
       </div>
@@ -245,30 +216,4 @@
           </div>
         </section>
       </div><!-- class='conteudo-secundario' -->
-<!--//////////////        EXCLUIR DAQUI PARA BAIXO         ////////////////-->
-
-
-
-    </div><!-- class='conteudo-principal' -->
-  </div><!--  id='wrapper'  -->
-  <footer>
-    <a href="https://parisotto.net" target="_blank">
-      <img src="https://www.parisotto.net/img/logo-pnet.png" alt="Parisotto.Net" title="Parisotto.Net">
-    </a>
-    <p>Copyright &copy; 1962-2025 - <a href="https://parisotto.net" target="_blank">Parisotto.Net Internet</a></p>
-    <p>Website Design by <strong>Edson Parisotto</strong></p>
-  </footer>
-
-  <script>
-    window.onscroll = function () { 
-      var header = document.getElementById("menu-principal"); 
-      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-         header.classList.add("header-small"); 
-        } else { 
-          header.classList.remove("header-small"); 
-        } 
-      };
-  </script>
-
-</body>
-</html>
+      {% endblock %}
