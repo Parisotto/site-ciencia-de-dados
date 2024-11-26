@@ -1,5 +1,4 @@
-# Certifique-se de estar na pasta raiz do projeto.
-# Crie um ambiente virtual. No terminal, digite: py -3 -m venv venv
-# Ative o ambiente virtual no terminal: venv\Scripts\Activate
-# Instale o flask no termina: pip install flask
-# Ser for preciso, ative novamente o ambiente virtual no terminal: venv\Scripts\Activate
+from siteciencia import app
+
+if __name__ == "__main__":
+  app.run(debug=True, port=5001)
