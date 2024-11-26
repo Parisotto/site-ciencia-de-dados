@@ -19,6 +19,5 @@ def galeria():
   lista_imagens = [f"{num}.jpg" for num in numeros]
   return render_template("galeria.html", imagens=lista_imagens)
 
-
 if __name__ == "__main__":
   app.run(debug=True, port=5001)
