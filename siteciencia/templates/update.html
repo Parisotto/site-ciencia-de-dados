@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Tabela - Update{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="../static/css/tabela.css">{% endblock %}
+{% block content %}
+<div id="geral">
+  <h1>Tabela - Atualização</h1>
+  <section>
+    <form class="form-inline" action="/update/{{ task.id }}" method="POST">
+      <div class="form-group">
+        <label for="description">Tarefa</label>
+        <input value="{{ task.description }}" type="text" class="form-control" name="description" id="description">
+        <button type="submit" class="btn btn-primary">Atualizar</button>
+        <p><a href="/tabela">Cancelar</a></p>
+      </div>
+    </form>
+  </section>
+</div>
+{% endblock %}
