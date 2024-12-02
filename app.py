@@ -40,19 +40,19 @@ def galeria():
   lista_imagens = [f"{num}.jpg" for num in numeros]
   return render_template("galeria.html", imagens=lista_imagens)
 
-@app.route("/tabela", methods=['POST', 'GET'])
-def tabela():
+@app.route("/tarefas", methods=['POST', 'GET'])
+def tarefas():
   if request.method == "POST":
     task = Task(description=request.form["description"])
     try:
       db.session.add((task))
       db.session.commit()
-      return redirect("/tabela")
+      return redirect("/tarefas")
     except:
       return "Houve um erro ao inserir a tarefa"
   else:
     tasks = Task.query.order_by(Task.date_created).all()
-    return render_template("tabela.html", tasks=tasks)
+    return render_template("tarefas.html", tasks=tasks)
 
 
 @app.route("/delete/<int:id>")
@@ -61,7 +61,7 @@ def delete(id):
   try:
     db.session.delete(task)
     db.session.commit()
-    return redirect("/tabela")
+    return redirect("/tarefas")
   except:
     return "Houve um problema na remoção da tarefa"
 
@@ -73,7 +73,7 @@ def update(id):
     task.description = request.form["description"]
     try:
       db.session.commit()
-      return redirect("/tabela")
+      return redirect("/tarefas")
     except:
       return "Houve um erro ao atualizar a tarefa"
   else:
