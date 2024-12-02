@@ -5,13 +5,11 @@ from flask_migrate import Migrate
 import random
 import os
 
-basedir = os.path.abspath(os.path.dirname(__file__))
-
 app = Flask(__name__, template_folder ="siteciencia/templates", static_folder = "siteciencia/static")
 
+basedir = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///" + os.path.join(basedir, "cd.sqlite")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
