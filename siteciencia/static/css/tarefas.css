@@ -96,7 +96,9 @@ form {
 
 label {
   display: block;
-  margin-bottom: 5px;
+  margin: 20px 0 10px;
+  color: white;
+  font-size: 20px;
 }
 
 input, textarea {

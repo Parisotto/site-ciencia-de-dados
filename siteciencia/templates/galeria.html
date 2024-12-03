@@ -2,7 +2,7 @@
 
 {% block title %}Galeria{% endblock %}
 {% block head %}
-<link rel="stylesheet" href="../static/css/galeria.css">{% endblock %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/galeria.css') }}">{% endblock %}
 {% block content %}
 <div id="geral">
   <h1>Galeria</h1>

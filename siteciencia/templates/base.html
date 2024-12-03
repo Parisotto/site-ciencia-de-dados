@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../static/css/base.css">
-  <link rel="shortcut icon" href="../static/img/piton.png">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img/piton.png') }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
 
   <title>{% block title %}{% endblock %}</title>
   {% block head %}{% endblock %}
@@ -17,10 +17,11 @@
   <div id="wrapper">
     <header id="menu-principal">
       <nav>
-        <div class="logo"> <a href="/"><img src="../static/img/logo-python.png" alt="Logo do Site"></a> </div>
+        <div class="logo"> <a href="/"><img src="{{ url_for('static', filename='img/logo-python.png') }}" alt="Logo do Site"></a> </div>
         <ul>
-          <li><a href="/galeria">Galeria</a></li>
-          <li><a href="/tarefas">Tarefas</a></li>
+          <li><a href="{{ url_for('galeria') }}">Galeria</a></li> 
+          <li><a href="{{ url_for('tarefas') }}">Tarefas</a></li> 
+          <li><a href="{{ url_for('frases') }}">Frases</a></li>
         </ul>
       </nav>
     </header>

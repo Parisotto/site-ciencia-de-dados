@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}Curso Técnico Ciência de Dados{% endblock %}
-{% block head %}<link rel="stylesheet" href="../static/css/index.css">{% endblock %}
+{% block head %}<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">{% endblock %}
 {% block content %}
       <div id="back">
         <h1>Ciência de Dados</h1>
@@ -10,7 +10,7 @@
       </div>
 
       <main id="home">
-        <img id="logo" src="../static/img/logo-cd.png" alt="Logo Ciência de dados">
+        <img id="logo" src="{{ url_for('static', filename='img/logo-cd.png') }}" alt="Logo Ciência de dados">
         <section id="apresentacao">
       
           <h1>Esta site foi Desenvolvido com<br>o micro-framework FLASK e Python</h1>
@@ -22,7 +22,7 @@
       def</span> <span class="app-func">site_cd</span>():<span class="app-return">
       return</span> <span class="app-txt">"Projeto em Flask"</span></code></pre>
       <!-- Fim da simulação de código Flask -->
-              <p><img src="../static/img/logo-flask-branco.png" alt="" width="50px">O <strong>Flask</strong> é um micro-framework que utiliza a linguagem <strong>Python</strong> para desenvolver aplicações web, sites interativos e APIs de forma rápida e eficiente, com a possibilidade de adicionar funcionalidades gradualmente, como suporte a banco de dados, autenticação, templates entre outras coisas mais.</p>
+              <p><img src="{{ url_for('static', filename='img/logo-flask-branco.png') }}" alt="" width="50px">O <strong>Flask</strong> é um micro-framework que utiliza a linguagem <strong>Python</strong> para desenvolver aplicações web, sites interativos e APIs de forma rápida e eficiente, com a possibilidade de adicionar funcionalidades gradualmente, como suporte a banco de dados, autenticação, templates entre outras coisas mais.</p>
               <p>Empresas como Zillow, Patreon, Reddit, Trivago, Pinterest e várias outras usam <strong>Flask</strong> em seus sites. Além disso, diversas empresas de ponta usam <strong>Flask</strong> em sua pilha, como Samsung, Netflix, Uber, Airbnb e outras.</p>
             </article>
             <article class="card">
@@ -32,13 +32,13 @@
       <span class="app-def">def</span> <span class="app-func">ciencia_de_dados</span>():
       <span class="app-return">return</span> <span class="app-txt">"Aprendendo com Python"</span></code></pre>
       <!-- Fim da simulação de código Flask -->
-              <p><img src="../static/img/logo-python.png" alt="" width="50px">Neste curso, os alunos do <strong>Curso Técnico em Ciência de Dados</strong> da <strong>E.E. Dr Ângelo Mendes de Almeida</strong> aprenderam a criar este site, suas múltiplas páginas, a integração com um banco de dados e formulários de cadastro, login e contato usando o <strong>Flask</strong> em seu desenvolvimento e o consumo de APIs em <strong>Python</strong> no back-end.</p>
+              <p><img src="{{ url_for('static', filename='img/logo-python.png') }}" alt="" width="50px">Neste curso, os alunos do <strong>Curso Técnico em Ciência de Dados</strong> da <strong>E.E. Dr Ângelo Mendes de Almeida</strong> aprenderam a criar este site, suas múltiplas páginas, a integração com um banco de dados e formulários de cadastro, login e contato usando o <strong>Flask</strong> em seu desenvolvimento e o consumo de APIs em <strong>Python</strong> no back-end.</p>
               <p>Todo o projeto foi desenvolvido em sala de aula após um ano praticando pequenos códigos em <strong>Python</strong> com a intensa participação dos alunos que efetuaram constantes atualizações em seus respectivos repositórios no <strong>GitHub</strong>.</p>
             </article>
           </div>
       
           <div class="mascote">
-            <img class="Pypet" src="../static/img/piton.png" alt="Mascote Pypet" width="150px">
+            <img class="Pypet" src="{{ url_for('static', filename='img/piton.png') }}" alt="Mascote Pypet" width="150px">
             <div class="balao">
               <p>Olá, ferinha!<br>Meu nome é PyPet.<br>Sou o mascote do curso de Ciência de Dados!</p>
             </div>
@@ -54,27 +54,27 @@
             <div>
               <p>O profissional capaz de <strong>analisar dados</strong> da maneira adequada poderá tomar decisões estratégicas de forma mais assertiva. E é por isso que as organizações estão buscando cada vez mais por esses profissionais.</p>
             </div>
-            <a href="/analise">Saiba mais</a>
+            <a href="{{ url_for('analise') }}">Saiba mais</a>
           </article>
           <article  id="estatistica">
             <h1>Estatística</h1>
             <div>
               <p>O conhecimento sobre <strong>estatística</strong> é fundamental para a eficiente aplicação dos recursos oferecidos pelas linguagens voltadas para a análise de dados e para a construção de painéis gerenciais.</p>
             </div>
-            <a href="/estatistica">Saiba mais</a>
+            <a href="{{ url_for('estatistica') }}">Saiba mais</a>
           </article>
           <article  id="programacao">
             <h1>Programação Python</h1>
             <div>
               <p>É importante que profissionais de todas as áreas tenham a habilidade de analisar os dados e utilizá-los de uma maneira estratégica no suporte à tomada de decisões com auxílio de aplicativos desenvolvidos com a linguagem <strong>Python</strong>.</p>
             </div>
-            <a href="/programacao">Saiba mais</a>
+            <a href="{{ url_for('programacao') }}">Saiba mais</a>
           </article>
         </section><!-- CAIXAS -->
         <h1 class="intervalo compo">Componentes do 1° ano do curso</h1>
         <section id="componentes">
           <article id="introducao">
-            <div class="icone"><img src="../static/img/logo-cd.png" alt=""></div>
+            <div class="icone"><img src="{{ url_for('static', filename='img/logo-cd.png') }}" alt=""></div>
             <div class="titulo">
               <h3>Introdução à Ciência de<br> Dados, Ferramentas e<br>Jargões da Área</h3>
             </div>
@@ -87,7 +87,7 @@
             </div>
           </article>
           <article id="logica">
-            <div class="icone"><img src="../static/img/logo-cd.png" alt=""></div>
+            <div class="icone"><img src="<div class="icone"><img src="{{ url_for('static', filename='img/logo-cd.png') }}" alt=""></div>
             <div class="titulo">
               <h3>Lógica, Algoritmo e<br>Operação de Planilhas<br>Eletrônicas</h3>
             </div>
@@ -97,7 +97,7 @@
             </div>
           </article>
           <article id="programacao">
-            <div class="icone"><img src="../static/img/logo-cd.png" alt=""></div>
+            <div class="icone"><img src="{{ url_for('static', filename='img/logo-cd.png') }}" alt=""></div>
             <div class="titulo">
               <h3>Programação aplicada<br>à Ciência de Dados</h3>
             </div>
@@ -107,7 +107,7 @@
             </div>
           </article>
           <article id="banco">
-            <div class="icone"><img src="../static/img/logo-cd.png" alt=""></div>
+            <div class="icone"><img src="{{ url_for('static', filename='img/logo-cd.png') }}" alt=""></div>
             <div class="titulo">
               <h3>Banco de Dados<br>e Computação em<br>Nuvem</h3>
             </div>
@@ -119,7 +119,7 @@
             </div>
           </article>
           <article id="carreira">
-            <div class="icone"><img src="../static/img/logo-cd.png" alt=""></div>
+            <div class="icone"><img src="{{ url_for('static', filename='img/logo-cd.png') }}" alt=""></div>
             <div class="titulo">
               <h3>Carreira e Competências<br>para o Mercado de Trabalho<br>em Ciência de Dados</p>
             </div>
@@ -134,7 +134,7 @@
             </div>
           </article>
           <article id="etica">
-            <div class="icone"><img src="../static/img/logo-cd.png" alt=""></div>
+            <div class="icone"><img src="{{ url_for('static', filename='img/logo-cd.png') }}" alt=""></div>
             <div class="titulo">
               <h3>Ética e Responsabilidade<br>em Inteligência Artificial</h3>
             </div>
@@ -149,7 +149,7 @@
         <h1 class="intervalo compo">Componentes do 2° ano do curso</h1>
         <section id="componentes">
           <article id="aprendizagem">
-            <div class="icone"><img src="../static/img/logo-cd.png" alt=""></div>
+            <div class="icone"><img src="{{ url_for('static', filename='img/logo-cd.png') }}" alt=""></div>
             <div class="titulo">
               <h3>Aprendizagem de Máquina</h3>
             </div>
@@ -160,7 +160,7 @@
             </div>
           </article>
           <article id="matematica">
-            <div class="icone"><img src="../static/img/logo-cd.png" alt=""></div>
+            <div class="icone"><img src="{{ url_for('static', filename='img/logo-cd.png') }}" alt=""></div>
             <div class="titulo">
               <h3>Matemática e Estatística<br>para Ciência de Dados</h3>
             </div>
@@ -172,7 +172,7 @@
             </div>
           </article>
           <article id="analise">
-            <div class="icone"><img src="../static/img/logo-cd.png" alt=""></div>
+            <div class="icone"><img src="{{ url_for('static', filename='img/logo-cd.png') }}" alt=""></div>
             <div class="titulo">
               <h3>Análise Exploratória de<br>Dados e Inteligência de<br>Negócio</h3>
             </div>
@@ -182,7 +182,7 @@
             </div>
           </article>
           <article id="inteligencia">
-            <div class="icone"><img src="../static/img/logo-cd.png" alt=""></div>
+            <div class="icone"><img src="{{ url_for('static', filename='img/logo-cd.png') }}" alt=""></div>
             <div class="titulo">
               <h3>Inteligência Artificial</h3>
             </div>
@@ -192,7 +192,7 @@
             </div>
           </article>
           <article id="multidisciplinar">
-            <div class="icone"><img src="../static/img/logo-cd.png" alt=""></div>
+            <div class="icone"><img src="{{ url_for('static', filename='img/logo-cd.png') }}" alt=""></div>
             <div class="titulo">
               <h3>Projeto Multidisciplinar</h3>
             </div>
